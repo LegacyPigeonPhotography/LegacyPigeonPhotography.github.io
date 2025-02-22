@@ -40,23 +40,25 @@
             justify-content: center;
             text-align: center;
             font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
         }
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 15px;
             padding: 40px 10px;
             background: #111;
         }
         .gallery img {
-            width: 350px;
+            width: 100%;
             height: auto;
             border-radius: 10px;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .gallery img:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(255,255,255,0.7);
         }
         section {
             padding: 50px;
@@ -73,6 +75,29 @@
             background: black;
             text-align: center;
             padding: 20px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact input, .contact textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact button {
+            background: white;
+            color: black;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background: gray;
         }
     </style>
 </head>
@@ -96,14 +121,18 @@
     
     <section id="portfolio" class="gallery">
         <h2>Portfolio</h2>
-        <img src="images/new_pigeon1.jpg" alt="Champion Racing Pigeon">
-        <img src="images/new_pigeon2.jpg" alt="Elite Breeder Pigeon">
-        <img src="images/new_pigeon3.jpg" alt="High-Speed Pigeon">
+        <img src="images/pigeon1.jpg" alt="Champion Racing Pigeon">
+        <img src="images/pigeon2.jpg" alt="Elite Breeder Pigeon">
+        <img src="images/pigeon3.jpg" alt="High-Speed Pigeon">
+        <img src="images/pigeon4.jpg" alt="Powerful Wing Shot">
+        <img src="images/pigeon5.jpg" alt="Sharp-Eyed Pigeon">
+        <img src="images/pigeon6.jpg" alt="Racing Winner">
     </section>
     
     <section id="services" class="services">
         <h2>Our Services</h2>
         <p>We provide professional photography for auctions, breeders, and racing events.</p>
+        <p>Our services include high-resolution portraits, action shots, and custom pigeon profile pages.</p>
     </section>
     
     <section id="about" class="about">
@@ -114,6 +143,12 @@
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Email: contact@legacypigeonphotography.com</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
     
     <footer>
