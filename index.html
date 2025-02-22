@@ -10,14 +10,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
-            background-color: #000;
+            background-color: black;
             color: white;
         }
         header {
             background: black;
-            color: white;
-            padding: 15px;
+            padding: 20px;
+            text-align: center;
         }
         nav ul {
             list-style: none;
@@ -25,22 +24,34 @@
         }
         nav ul li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-size: 18px;
             font-weight: bold;
         }
         .hero {
             background: url('images/hero_new.jpg') no-repeat center center/cover;
-            color: white;
-            padding: 100px 20px;
-            font-size: 24px;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 28px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 40px 10px;
+            background: #111;
         }
         .gallery img {
-            width: 300px;
-            margin: 10px;
+            width: 350px;
+            height: auto;
             border-radius: 10px;
             transition: transform 0.3s;
         }
@@ -49,17 +60,19 @@
         }
         section {
             padding: 50px;
-            background: #111;
+            text-align: center;
+        }
+        .services, .about, .contact {
+            background: #222;
             margin: 20px auto;
-            max-width: 800px;
+            padding: 40px;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(255,255,255,0.1);
+            max-width: 900px;
         }
         footer {
             background: black;
-            color: white;
+            text-align: center;
             padding: 20px;
-            margin-top: 20px;
         }
     </style>
 </head>
@@ -79,28 +92,26 @@
     
     <section id="home" class="hero">
         <h2>Capturing the Legends of Racing Pigeons</h2>
-        <p>Where champions, legends, and bloodline power meet.</p>
     </section>
     
     <section id="portfolio" class="gallery">
         <h2>Portfolio</h2>
-        <div class="image-container">
-            <img src="images/new_pigeon1.jpg" alt="Champion Racing Pigeon">
-            <img src="images/new_pigeon2.jpg" alt="Elite Breeder Pigeon">
-        </div>
+        <img src="images/new_pigeon1.jpg" alt="Champion Racing Pigeon">
+        <img src="images/new_pigeon2.jpg" alt="Elite Breeder Pigeon">
+        <img src="images/new_pigeon3.jpg" alt="High-Speed Pigeon">
     </section>
     
-    <section id="services">
+    <section id="services" class="services">
         <h2>Our Services</h2>
-        <p>Professional photography for auctions, breeders, and racing events.</p>
+        <p>We provide professional photography for auctions, breeders, and racing events.</p>
     </section>
     
-    <section id="about">
+    <section id="about" class="about">
         <h2>About Us</h2>
         <p>Legacy Pigeon Photography specializes in capturing the speed, power, and beauty of elite racing pigeons.</p>
     </section>
     
-    <section id="contact">
+    <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Email: contact@legacypigeonphotography.com</p>
     </section>
